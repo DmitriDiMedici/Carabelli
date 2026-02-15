@@ -7,6 +7,8 @@
   --text-font-color: #94a0a8;
   --main-font: "Plus Jakarta Sans", sans-serif;
   --title-font: "Playfair Display", serif;
+  --bg-cream: #f3f0e7;
+  --card-beige: #ebe7d5;
 }
 
 * {
@@ -20,7 +22,6 @@ body {
   width: 100%;
   font-family: var(--main-font);
   color: var(--text-font-color);
-  background-color: var(--body-color);
 }
 
 .container {
@@ -286,4 +287,214 @@ body {
 .floating-card small {
   font-size: 0.8rem;
   color: var(--text-font-color);
+}
+
+/* Nosotros Config */
+
+.about-section {
+  background-color: var(--bg-cream);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-subtitle {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.about-content h2 {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  color: var(--hero-color);
+  margin: 0 0 25px 0;
+  line-height: 1.1;
+}
+
+.about-content p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  margin-top: -5px;
+  background-color: rgba(22, 162, 134, 0.15);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+  color: var(--hero-color);
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  width: 100%;
+}
+
+.bento-card {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+}
+
+.bento-card strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+  color: var(--hero-color);
+}
+
+.bento-card span {
+  font-family: var(--main-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--hero-color);
+  letter-spacing: 1.5px;
+}
+
+.bg-green,
+.bg-dark {
+  color: white;
+}
+
+.bg-green span,
+.bg-dark span {
+  color: white;
+}
+
+.bento-card.bg-dark i,
+.bento-card.bg-dark svg {
+  color: var(--secondary-color);
+}
+
+.bg-beige {
+  background-color: var(--card-beige);
+  color: var(--hero-color);
+}
+
+.bg-beige strong {
+  font-size: 2.5rem;
+  font-family: var(--title-font);
+  color: var(--secondary-color);
+}
+
+.bg-beige-light {
+  background-color: #e6e2d0;
+  color: var(--secondary-color);
+}
+
+.bg-beige-light strong {
+  font-size: 2.5rem;
+  font-family: var(--title-font);
+  color: var(--secondary-color);
+}
+
+.bg-green {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-green span {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.bg-dark {
+  background-color: var(--hero-color);
+  color: white;
+}
+
+.bg-dark span {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 90px;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .bento-card:nth-child(1),
+  .bento-card:nth-child(4) {
+    grid-row: span 2;
+  }
+
+  .bento-card:nth-child(2),
+  .bento-card:nth-child(3) {
+    grid-row: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-card strong {
+    font-size: 3.5rem;
+  }
 }
