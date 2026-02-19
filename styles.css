@@ -1,14 +1,14 @@
 :root {
-  --body-color: #ede8d0;
+  --body-color: #edebde;
   --hero-color: #132339;
   --secondary-color: #16a286;
   --light-green: #e0f5f1;
   --title-font-color: #1d2530;
   --text-font-color: #94a0a8;
-  --main-font: "Plus Jakarta Sans", sans-serif;
-  --title-font: "Playfair Display", serif;
-  --bg-cream: #f3f0e7;
+  --bg-cream: #f5f2e5;
   --card-beige: #ebe7d5;
+  --main-font: "Inter", sans-serif;
+  --title-font: "Playfair Display", serif;
 }
 
 * {
@@ -17,11 +17,22 @@
 
 html,
 body {
+  font-family: var(--main-font);
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: var(--main-font);
   color: var(--text-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+  color: var(--title-font-color);
+  line-height: 1.2;
 }
 
 .container {
@@ -151,7 +162,6 @@ body {
 }
 
 .hero-text h1 {
-  font-family: var(--title-font);
   font-size: 2.75rem;
   line-height: 1.1;
   color: white;
@@ -314,9 +324,7 @@ body {
 }
 
 .about-content h2 {
-  font-family: var(--title-font);
   font-size: 2.5rem;
-  color: var(--hero-color);
   margin: 0 0 25px 0;
   line-height: 1.1;
 }
@@ -356,8 +364,6 @@ body {
 .feature-item h3 {
   margin: 0 0 5px 0;
   font-size: 0.95rem;
-  color: var(--hero-color);
-  font-family: var(--title-font);
   font-weight: 700;
 }
 
@@ -391,7 +397,7 @@ body {
 
 .bento-card strong {
   display: block;
-  font-family: "Playfair Display", serif;
+  font-family: var(--main-font);
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 1;
@@ -429,7 +435,7 @@ body {
 
 .bg-beige strong {
   font-size: 2.5rem;
-  font-family: var(--title-font);
+  font-family: var(--main-font);
   color: var(--secondary-color);
 }
 
@@ -440,7 +446,7 @@ body {
 
 .bg-beige-light strong {
   font-size: 2.5rem;
-  font-family: var(--title-font);
+  font-family: var(--main-font);
   color: var(--secondary-color);
 }
 
@@ -496,5 +502,95 @@ body {
 @media (max-width: 768px) {
   .bento-card strong {
     font-size: 3.5rem;
+  }
+}
+
+/* Servicios config */
+
+.services-section {
+  padding: 80px 0;
+  background-color: var(--body-color);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #f7f6ed;
+  border: 1px solid #e8e6df;
+  border-radius: 12px;
+  padding: 35px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box {
+  width: 55px;
+  height: 55px;
+  background-color: #ece8cf;
+  color: var(--secondary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: var(--secondary-color);
+}
+
+.service-card:hover .icon-box {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-font-color);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
   }
 }
