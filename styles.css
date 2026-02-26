@@ -594,3 +594,142 @@ h6 {
     font-size: 2rem;
   }
 }
+
+/* Doctoras config */
+
+.team-section {
+  padding: 80px 0;
+  background-color: var(--bg-cream);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.team-card {
+  background-color: #fcfbf7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-image-wrapper {
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+
+.team-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.team-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(19, 35, 57, 0.95) 10%,
+    rgba(19, 35, 57, 0.5) 70%,
+    transparent
+  );
+  padding: 40px 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-title-overlay h3 {
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  font-size: 1.4rem;
+}
+
+.team-title-overlay span {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.team-info {
+  padding: 30px;
+}
+
+.team-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.team-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+}
+
+.team-badge svg {
+  color: var(--secondary-color);
+}
+
+.team-badge .badge-cedula {
+  border: none;
+  color: var(--title-font-color);
+  font-weight: 600;
+  padding: 8px 14px;
+}
+
+.badge-cedula svg {
+  color: var(--title-font-color);
+}
+
+.badge-beige {
+  background-color: #ece8cf;
+}
+
+.badge-mint {
+  background-color: var(--light-green);
+  color: #128277;
+}
+
+.badge-mint svg {
+  color: #128277;
+}
+
+.badge-info {
+  background-color: #f2f0e6;
+}
+
+.team-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+  color: var(--text-font-color);
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .team-image-wrapper {
+    height: 320px;
+  }
+}
